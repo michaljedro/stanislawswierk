@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Home() {
+function Gallery() {
     return (
         <div>
-            HomePage
+            Gallery
         </div>
     )
 }
 
-export default Home
+export default Gallery

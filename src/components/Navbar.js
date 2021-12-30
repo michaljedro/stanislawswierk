@@ -1,27 +1,37 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom';
+import './Navbar.css'
+import  {SidebarData}  from './SidebarData';
+
 
 function Navbar() {
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click)
     return (
-        <>
-            <div className='navbar'>
-                <Link to='#' className='menu-bars'>
-                    <FaIcons.FaBars />
-                </Link>
-            </div>
-            <nav className={sidebar ? 'nav-menu active' : 'nav-menu' }>
-                <ul className='nav-menu-tems'>
-                    <li className='navbar-toggle'>
-                        <Link to='#' className='menu-bars'>
-                            <AiIcons.AiOutlineClose />
-                        </Link>
-                    </li>  
+        <div className='navbar'>
+            <div className='container'>
+                <h3 className='logo'>Stanisław Świerk</h3>
+                <ul className={click? 'nav-menu active' : 'nav-menu'}>
+                {SidebarData.map((item) => {
+                    const { id, title, path } = item;
+                        return (
+                                <li key={id}>
+                                    <Link to={path}>
+                                    <span>{title}</span>
+                                    </Link>
+                                </li>
+                            // <li key={id}>
+                            // <a href={path}>{title}</a>
+                            // </li>
+                        );
+                    })}
                 </ul>
-            </nav>
-        </>
-    )
+                <div className='hamburger' onClick={handleClick}>
+                    znaczek
+                </div>
+            </div>
+        </div>
+    )  
 }
 
 export default Navbar
