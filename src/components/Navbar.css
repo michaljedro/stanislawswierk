@@ -10,17 +10,14 @@
     height: 75px; 
     background-color: black;
     color: #ffffff;
-    /* border: 5px sohgtfdzslid orange; */
 }
 .logo {
     font-size: 30px;
     color: white;
     flex: 1;
     padding-left: 50px;
-    /* border: 4px solid pink; */
 }
 .nav-links {
-    /* border: 1px solid yellow; */
     flex: 1;
     display: flex;
     justify-content: space-around;
@@ -34,4 +31,52 @@
     padding: 10px 20px;
     margin: 0 auto;
     cursor: pointer;
+}
+.icon {
+    background-color: black;
+}
+.mobile-menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+    .log {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: black;
+        left: 0;
+        top: 75px;
+        transition: all .5s ease-out;
+        width: 100%;
+    }
+    .list-item {
+        text-align: center;
+        width: 100%;
+        transition: all .5s easej;
+    }
+}
+.mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    top: 15px;
+}
+@media screen and (min-width: 781px) {
+    .mobile-menu-icon {
+        display: none;
+    }
 }

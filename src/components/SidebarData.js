@@ -1,24 +1,24 @@
 
 export const SidebarData = [
     {
-        title:'Home',
+        title:'Strona Główna',
         path:'/',
         id: 1,
     },
     {
-        title:'About',
+        title:'O mnie',
         path: '/about',
         id: 2,
     },
     {
-        title:'Contact',
-        path:'/contact',
+        title:'Galeria',
+        path:'/gallery',
         id: 3,
 
     },
     {
-        title:'Gallery',
-        path:'/gallery',
+        title:'Kontakt',
+        path:'/contact',
         id: 4,
     }
 ];
