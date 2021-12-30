@@ -9,29 +9,31 @@ function Navbar() {
     const handleClick = () => setClick(!click)
     return (
         <div className='navbar'>
-            <div className='container'>
                 <h3 className='logo'>Stanisław Świerk</h3>
-                <ul className={click? 'nav-menu active' : 'nav-menu'}>
+                <ul className='nav-links'>
                 {SidebarData.map((item) => {
                     const { id, title, path } = item;
                         return (
-                                <li key={id}>
-                                    <Link to={path}>
-                                    <span>{title}</span>
-                                    </Link>
-                                </li>
-                            // <li key={id}>
-                            // <a href={path}>{title}</a>
-                            // </li>
+                                <Link to={path} key={id}className='list-item'>
+                                    <li>{title}</li>
+                                </Link>
                         );
                     })}
                 </ul>
                 <div className='hamburger' onClick={handleClick}>
-                    znaczek
                 </div>
             </div>
-        </div>
     )  
 }
 
 export default Navbar
+
+
+                                // <li key={id} >
+                                //     <Link to={path} className='list-item'>
+                                //     <span>{title}</span>
+                                //     </Link>
+                                // </li>
+                            // <li key={id}>
+                            // <a href={path}>{title}</a>
+                            // </li>
