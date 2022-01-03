@@ -1,11 +1,11 @@
 import React from 'react'
-import './Home.css';
+import { Container } from '../styles/Container.styled';
 
 function Home() {
     return (
-        <div className='division'>
+        <Container>
             HomePage
-        </div>
+        </Container>
     )
 }
 
