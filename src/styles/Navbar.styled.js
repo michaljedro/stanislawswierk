@@ -7,7 +7,7 @@ export const Header = styled.div`
 
 export const Nav = styled.div`
     display:flex;
-    padding-top:30px;
+    padding-top:20px;
     height:40px;
     justify-content: flex-end;
     align-items:center;
