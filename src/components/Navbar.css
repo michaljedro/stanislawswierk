@@ -1,0 +1,8 @@
+.white { 
+    color:white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 8px 15px;
+    margin-left: 30px;
+    border-radius: 30px;
+}

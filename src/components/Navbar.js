@@ -1,27 +1,37 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom';
+import  {SidebarData}  from './SidebarData';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Container } from '../styles/Container.styled';
+import { Header, Nav, List, ItemList } from '../styles/Navbar.styled';
+import './Navbar.css'
 
-function Navbar() {
+
+const Navbar = () => {
+    const [isVisible, setIsVisible] = useState(false);
     return (
-        <>
-            <div className='navbar'>
-                <Link to='#' className='menu-bars'>
-                    <FaIcons.FaBars />
-                </Link>
-            </div>
-            <nav className={sidebar ? 'nav-menu active' : 'nav-menu' }>
-                <ul className='nav-menu-tems'>
-                    <li className='navbar-toggle'>
-                        <Link to='#' className='menu-bars'>
-                            <AiIcons.AiOutlineClose />
-                        </Link>
-                    </li>  
-                </ul>
-            </nav>
-        </>
+        <Header>
+            <Container>
+                <Nav>
+                    <List>
+                        {SidebarData.map((item)=> {
+                            const {id,title,path} = item;
+                            return(
+                                <ItemList key={id}>
+                                    <Link to={path} className='white'>
+                                        {title}
+                                    </Link>
+                                </ItemList>
+                            )
+                        })}
+                    </List>
+                </Nav>
+            </Container>
+        </Header>
     )
 }
 
 export default Navbar
+
+
+
