@@ -18,15 +18,17 @@ const Text = styled.div`
 `
 function Home() {
     return (
+        <Container>
             <Homecase>
-                <Text>
-                    <h1>Stanisław Świerk</h1>
-                    <p>Think Positive!</p>
-                </Text>
-                <div>
-                    <img src={Photo}/>
-                </div>
+                    <Text>
+                        <h1>Stanisław Świerk</h1>
+                        <p>Think Positive!</p>
+                    </Text>
+                    <div>
+                        <img src={Photo}/>
+                    </div>
             </Homecase>
+        </Container>
     )
 }
 

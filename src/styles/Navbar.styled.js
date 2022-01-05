@@ -15,7 +15,8 @@ export const Nav = styled.div`
 export const List = styled.ul`
     width:70%;
     display:flex;
-    justify-content:space-around;
+    justify-content:flex-end;
+    // background-color: yellow;
 `
 
 export const ItemList = styled.li`
