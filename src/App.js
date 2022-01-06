@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
 import GlobalStyles from './styles/Global';
+import {Bloczek} from './styles/Home.styled'
+import { unmountComponentAtNode } from 'react-dom';
 
 const theme = {
   colors: {
@@ -15,12 +17,6 @@ const theme = {
   }
 }
 
-const Bloczek = styled.div`
-  // border:5px solid yellow;
-  height:100vh;
-  display:flex;
-  flex-direction: column;
-`
 function App() {
   return (
     <ThemeProvider theme={theme}>

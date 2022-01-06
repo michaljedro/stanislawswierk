@@ -10,6 +10,10 @@ const Homecase = styled.div`
 `
 const Text = styled.div`
     // border: 1px solid pink;
+    @media (min-width: 768px) {
+        background-color:pink;
+      }
+    
     width:50%;
     display:flex;
     flex-direction: column;
