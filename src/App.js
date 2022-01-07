@@ -7,15 +7,24 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
 import GlobalStyles from './styles/Global';
-import {Bloczek} from './styles/Home.styled'
-import { unmountComponentAtNode } from 'react-dom';
+import {device} from './styles/Breakpoints.styled';
 
 const theme = {
   colors: {
     bgc: 'black',
     font: 'white',
+    test: 'green',
   }
 }
+const Bloczek = styled.div`
+  @media ${device.mobileS} {
+    color: ${theme.colors.test};
+    display:flex;
+    flex-direction:column;
+    border: 5px solid green;
+    height:100vh;
+  }
+`
 
 function App() {
   return (
