@@ -6,17 +6,14 @@ import {PhotoItem} from '../styles/Home.styled'
 import Photo from '../assets/1.png'
 
 
-const HomePage = styled.div`
-    background-color:pink;
-    flex:1;
-
-`
 function Home() {
     return (
-        <div>
-            
-            Home
-        </div>
+        <main>
+            <div>
+                <h1>Stanisław Świerk</h1>
+                <h4>Think Positive!</h4>
+            </div>
+        </main>
     )
 }
 
