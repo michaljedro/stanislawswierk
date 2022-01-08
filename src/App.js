@@ -7,20 +7,22 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
 import GlobalStyles from './styles/Global';
+import {device} from './styles/Breakpoints.styled';
 
 const theme = {
   colors: {
     bgc: 'black',
     font: 'white',
+    test: 'green',
   }
 }
-
 const Bloczek = styled.div`
-  // border:5px solid yellow;
-  height:100vh;
+  // border: 10px solid yellow;
   display:flex;
-  flex-direction: column;
+  flex-direction:column;
+  height:100vh;
 `
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
