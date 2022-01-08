@@ -9,10 +9,12 @@ import Photo from '../assets/1.png'
 const HomePage = styled.div`
     background-color:pink;
     flex:1;
+
 `
 function Home() {
     return (
         <div>
+            
             Home
         </div>
     )
