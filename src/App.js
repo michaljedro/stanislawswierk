@@ -17,13 +17,10 @@ const theme = {
   }
 }
 const Bloczek = styled.div`
-  @media ${device.mobileS} {
-    color: ${theme.colors.test};
-    display:flex;
-    flex-direction:column;
-    border: 5px solid green;
-    height:100vh;
-  }
+  // border: 10px solid yellow;
+  display:flex;
+  flex-direction:column;
+  height:100vh;
 `
 
 function App() {

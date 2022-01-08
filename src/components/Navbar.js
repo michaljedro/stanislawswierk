@@ -10,18 +10,20 @@ import { Btn } from '../styles/Home.styled';
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const toggleIcon = () => {
+    const toggleVisible = () => {
         setIsVisible(!isVisible);
-        console.log(isVisible);
     }
     return (
         <nav>
             <div>
-                <button onClick={toggleIcon}>
-                    {isVisible?<FaTimes />:<FaBars />  }
-                </button>
+                    <button className='openBtn' onClick={toggleVisible}>
+                        <FaBars />
+                    </button>
             </div>
-            <div className={isVisible? 'sidenav':''}> 
+            <div className={isVisible? 'openNav':'sidenav'}>
+                <button className='closeBtn' onClick={toggleVisible}>
+                    <FaTimes />
+                </button>
                 <ul> 
                     {SidebarData.map((link)=> {
                         const {title,id, path} = link;
@@ -34,24 +36,6 @@ const Navbar = () => {
                 </ul>
             </div>
         </nav>
-        // <Header>
-        //     <Container>
-        //         <Nav>
-        //             <List className={isVisible? }>
-        //                 {SidebarData.map((item)=> {
-        //                     const {id,title,path} = item;
-        //                     return(
-        //                         <ItemList key={id}>
-        //                             <Link to={path} className='white'>
-        //                                 {title}
-        //                             </Link>
-        //                         </ItemList>
-        //                     )
-        //                 })}
-        //             </List>
-        //         </Nav>
-        //     </Container>
-        // </Header>
     )
 }
 
