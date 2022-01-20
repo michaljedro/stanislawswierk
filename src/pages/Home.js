@@ -1,4 +1,5 @@
 import React from 'react'
+import './Home.css'
 import styled from 'styled-components';
 import { device } from '../styles/Breakpoints.styled';
 import { Container } from '../styles/Container.styled';

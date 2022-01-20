@@ -14,7 +14,7 @@ const Navbar = () => {
         setIsVisible(!isVisible);
     }
     return (
-        <nav>
+        <nav className='navbar'>
             <div>
                     <button className='openBtn' onClick={toggleVisible}>
                         <FaBars />
