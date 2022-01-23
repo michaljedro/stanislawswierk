@@ -17,10 +17,10 @@ const theme = {
   }
 }
 const Bloczek = styled.div`
-  border: 10px solid yellow;
   display:flex;
   flex-direction:column;
   height:100vh;
+  position: relative;
 `
 
 function App() {

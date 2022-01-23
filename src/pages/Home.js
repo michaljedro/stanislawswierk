@@ -9,10 +9,15 @@ import Photo from '../assets/1.png'
 
 function Home() {
     return (
-        <main>
-            <div>
-                <h1>Stanisław Świerk</h1>
-                <h4>Think Positive!</h4>
+        <main className='main container'>
+            <div className='text'> 
+                <h4>Stanisław Świerk</h4>
+                <p> Myśl pozytywnie!</p>
+            </div>
+            <div className='photo'>
+                <div className='empty'>
+                    <img src={Photo} className='stachu' />
+                </div>
             </div>
         </main>
     )
